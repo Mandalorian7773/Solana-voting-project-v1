@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decentralized Voting App</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="main.js"></script>
+    
+</head>
+<body>
+    <h1>Decentralized Voting Application</h1>
+    
+    <div class="section" id="admin-section">
+        <h2>Admin Panel</h2>
+        <div>
+            <h3>Add Candidate</h3>
+            <input type="text" id="candidate-id" placeholder="Candidate ID">
+            <input type="text" id="candidate-name" placeholder="Candidate Name">
+            <button onclick="addCandidate()">Add Candidate</button>
+            <div id="add-candidate-message"></div>
+        </div>
+        <div>
+            <h3>End Voting</h3>
+            <button onclick="endVoting()">End Voting</button>
+            <div id="end-voting-message"></div>
+        </div>
+    </div>
+
+    <div class="section" id="voter-section">
+        <h2>Voter Registration</h2>
+        <input type="text" id="voter-id" placeholder="Your Voter ID">
+        <button onclick="registerVoter()">Register</button>
+        <div id="register-message"></div>
+    </div>
+
+    <div class="section" id="voting-section">
+        <h2>Cast Your Vote</h2>
+        <div>
+            <input type="text" id="voting-voter-id" placeholder="Your Voter ID">
+            <select id="candidate-select">
+                <option value="">Select a candidate</option>
+            </select>
+            <button onclick="castVote()">Vote</button>
+            <div id="vote-message"></div>
+        </div>
+    </div>
+
+    <div class="section" id="results-section">
+        <h2>Election Results</h2>
+        <button onclick="getResults()">View Results</button>
+        <div id="results"></div>
+    </div>
+</body>
+</html>
